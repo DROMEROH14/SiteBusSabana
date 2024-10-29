@@ -6,7 +6,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 7188;
+const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -15,7 +15,7 @@ const admins = []; // Arreglo en memoria para almacenar administradores
 
 // Ruta para servir el archivo HTML
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/app/modules/admin/index.html'));
+    res.sendFile(path.join(__dirname, 'src/index.html'));
 });
 
 // Registro de administrador
